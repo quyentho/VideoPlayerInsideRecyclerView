@@ -48,21 +48,11 @@
                 app:video_url="@{dataModel.media_url}"
                 app:on_state_change="@{callback}"
                 app:progressbar="@{progressBar}"
-                app:thumbnail="@{thumbnail}"
                 app:item_index="@{index}"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" />
-
-            <ImageView
-                android:id="@+id/thumbnail"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:adjustViewBounds="true"
-                android:background="#fff"
-                android:scaleType="centerCrop"
-                app:thumbnail="@{dataModel.thumbnail}" />
 
             <ImageView
                 android:id="@+id/volume_control"

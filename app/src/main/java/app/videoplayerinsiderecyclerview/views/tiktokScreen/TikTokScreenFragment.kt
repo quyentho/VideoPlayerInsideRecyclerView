@@ -8,10 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.LinearSnapHelper
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.SnapHelper
+import androidx.recyclerview.widget.*
 import app.videoplayerinsiderecyclerview.R
 import app.videoplayerinsiderecyclerview.models.MediaObject
 import app.videoplayerinsiderecyclerview.utils.PlayerViewAdapter
@@ -67,7 +64,7 @@ class TikTokScreenFragment : Fragment() {
         recyclerView!!.layoutManager = layoutManager
         recyclerView!!.adapter = mAdapter
 
-        val snapHelper: SnapHelper = LinearSnapHelper()
+        val snapHelper: SnapHelper = PagerSnapHelper()
         snapHelper.attachToRecyclerView(recyclerView!!)
 
         scrollListener = object : RecyclerViewScrollListener() {

@@ -33,30 +33,6 @@
             android:layout_height="0.5dp"
             android:background="#000" />
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-
-            android:textStyle="bold"
-            android:text="@{dataModel.title}"
-            android:textColor="#000"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/subTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="15dp"
-            android:padding="10dp"
-            android:text="@{dataModel.description}"
-            android:textColor="#000"
-            android:textSize="15sp" />
-
         <FrameLayout
             android:id="@+id/media_container"
             android:layout_width="match_parent"
@@ -73,21 +49,11 @@
                 app:video_url="@{dataModel.media_url}"
                 app:on_state_change="@{callback}"
                 app:progressbar="@{progressBar}"
-                app:thumbnail="@{thumbnail}"
                 app:item_index="@{index}"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" />
-
-            <ImageView
-                android:id="@+id/thumbnail"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:adjustViewBounds="true"
-                android:background="#fff"
-                android:scaleType="centerCrop"
-                app:thumbnail="@{dataModel.thumbnail}" />
 
             <ImageView
                 android:id="@+id/volume_control"

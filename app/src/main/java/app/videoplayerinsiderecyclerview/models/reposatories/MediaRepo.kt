@@ -10,40 +10,113 @@ class MediaRepo {
     // dummy data for get list of media objects
     public fun getMediaData(): MutableLiveData<MutableList<MediaObject>> {
         val data: MutableLiveData<MutableList<MediaObject>> = MutableLiveData()
+        val listOfStrings = listOf("https://videos.ecommerce.kiemtradoanhthuwesaam.info/2dgcn0rr.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/laxin2xz.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/rc3t1qx2.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/4tnj54jo.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/mvyycbma.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/wzgtdmin.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/x0ejr3nv.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/wta5e2hr.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/guawp13y.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/fugigket.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/ybmxnjnm.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/uavho301.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/4ehg2zc3.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/mx3irkp5.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/w1avt4pi.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/n2t2cia5.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/3cfcwibl.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/v5k3knzq.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/4tdxeo2e.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/e5u3po41.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/lxuzgsxr.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/c1zmhn3q.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/iazsbrwp.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/h0f3j13h.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/gprsfmvr.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/l1wkkumw.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/01twpc5k.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/r2pg31ko.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/pkz5oitg.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/0qbyzzfm.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/zsa4zj3s.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/hwknpyuo.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/uyy2rpv1.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/pfhc5kak.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/nysg4n0y.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/2cxrlq43.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/4g0b4tjs.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/djfi5shl.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/ty2i0gxt.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/epspgaid.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/zfeas0hf.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/gdxyuzlt.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/2bft4ydu.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/y4m5fawx.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/ho02t13i.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/nrhihkfv.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/i1emi04o.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/ldhgxmus.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/vbyuhitt.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/cjdywies.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/mw2ivnw2.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/kk0xrtpl.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/0i1gv2d0.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/mxdvw0i0.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/kygyzcz5.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/ge1qxvye.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/axdtkl02.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/4aknbuxz.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/vjwskm45.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/mpn2ainl.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/az4q3bzw.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/zgmsh1zb.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/cgzy0w1s.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/gvtrcmmu.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/4w3lbpch.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/ol00dx2e.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/r3yjlnit.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/wpuimsnk.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/q2bnc3oc.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/grjttlda.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/0a4xivis.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/1kxmvfwt.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/nwphpwes.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/43slvajl.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/grzhsesj.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/hczrvqbe.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/cyu1fscm.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/ncxrkslw.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/o43smnqu.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/zfstm4rv.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/oxnlklho.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/hmlzdyqv.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/gf1rtyp5.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/qhanhvsq.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/zfn1ju1a.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/p4s1daj4.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/1fpxumik.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/fvi2i1t0.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/yanyceps.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/fu3ygmdt.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/0wwme2gs.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/4qk2onkn.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/niz2nz3e.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/u1zlarfz.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/jdnv3p2g.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/rvpjjzar.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/ns5fvu0f.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/dyrhf2lr.mp4",
+            "https://videos.ecommerce.kiemtradoanhthuwesaam.info/0zxicmrh.mp4") // Your list of strings
+
+        val mediaObjects: MutableList<MediaObject> = listOfStrings.map { title ->
+            MediaObject(title)
+        }.toMutableList()
+
         val dataObservable = Observable.create<MutableList<MediaObject>> {
             it.onNext(
-                mutableListOf(
-                    MediaObject(
-                        "Big Buck Bunny",
-                        "https://static.klliq.com/videos/uWPJnU7z5OysYjptZkBI6T1HANjC4WdP_hd.mp4",
-                        "https://static.klliq.com/thumbnails/UFfUCqtb4FYwLRmI_m2Pq8xvRw-7vA-2.png",
-                        "Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\\n\\nLicensed under the Creative Commons Attribution license\\nhttp://www.bigbuckbunny.org"
-                    ),
-                    MediaObject(
-                        "Elephant Dream",
-                        "https://static.klliq.com/videos/0HkyPAfPcmN0r5WxkYYvIHSi9jcC8Z_I_hd.mp4",
-                        "https://static.klliq.com/thumbnails/uYSHHSfB6F183ZHYk1OnBjCe5C_1yseF.png",
-                        "The first Blender Open Movie from 2006"
-                    ),
-                    MediaObject(
-                        "For Bigger Blazes",
-                        "https://static.klliq.com/videos/EJUhFO-_YQkH_Ll6tPppf2EkR794aTQQ_hd.mp4",
-                        "https://static.klliq.com/thumbnails/5a7Byj0r5ZIKC0gV9QWCneZQZEmKCP-B.png",
-                        "HBO GO now works with Chromecast -- the easiest way to enjoy online video on your TV. For when you want to settle into your Iron Throne to watch the latest episodes. For \$35.\\nLearn how to use Chromecast with HBO GO and more at google.com/chromecast."
-                    ),
-                    MediaObject(
-                        "For Bigger Escape",
-                        "https://static.klliq.com/videos/QMWR5PxqxnnAILvO8iGB5ygvV47wxoDK_hd.mp4",
-                        "https://static.klliq.com/thumbnails/vGRpl-Xw45xfOCborXr3bwAsl0uu_qMA.png",
-                        "Introducing Chromecast. The easiest way to enjoy online video and music on your TV—for when Batman's escapes aren't quite big enough. For \$35. Learn how to use Chromecast with Google Play Movies and more at google.com/chromecast."
-                    ),
-                    MediaObject(
-                        "For Bigger Fun",
-                        "https://static.klliq.com/videos/Nca_afaqR15IQIrEDyhH9zEtoPSycv_z_hd.mp4",
-                        "https://static.klliq.com/thumbnails/ZnFAHzGD9RQrRsBjJt2Pv3Y1vIAo11FX.png",
-                        "Introducing Chromecast. The easiest way to enjoy online video and music on your TV. For \$35.  Find out more at google.com/chromecast."
-                    )
-                )
+                mediaObjects
             )
 
             it.onComplete()

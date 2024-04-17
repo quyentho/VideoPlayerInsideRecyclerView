@@ -65,7 +65,6 @@ class InstagramScreenFragment : Fragment() {
             ) {
 
                 //handle item click events here
-                Toast.makeText(activity, "Hey " + model?.title, Toast.LENGTH_SHORT).show()
             }
         })
     }

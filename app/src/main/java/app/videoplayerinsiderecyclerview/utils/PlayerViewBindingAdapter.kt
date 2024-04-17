@@ -55,8 +55,8 @@ class PlayerViewAdapter {
         * thumbnail for show before video start
         * */
         @JvmStatic
-        @BindingAdapter(value = ["video_url", "on_state_change", "progressbar", "thumbnail", "item_index", "autoPlay"], requireAll = false)
-        fun StyledPlayerView.loadVideo(url: String, callback: PlayerStateCallback, progressbar: ProgressBar, thumbnail: ImageView, item_index: Int? = null, autoPlay: Boolean = false) {
+        @BindingAdapter(value = ["video_url", "on_state_change", "progressbar",  "item_index", "autoPlay"], requireAll = false)
+        fun StyledPlayerView.loadVideo(url: String, callback: PlayerStateCallback, progressbar: ProgressBar,  item_index: Int? = null, autoPlay: Boolean = false) {
             if (url == null) return
             val player = ExoPlayer.Builder(context).build()
 
@@ -87,14 +87,12 @@ class PlayerViewAdapter {
                         // Buffering..
                         // set progress bar visible here
                         // set thumbnail visible
-                        thumbnail.visibility = View.VISIBLE
                         progressbar.visibility = View.VISIBLE
                     }
                     if (playbackState == ExoPlayer.STATE_READY) {
                         // [PlayerView] has fetched the video duration so this is the block to hide the buffering progress bar
                         progressbar.visibility = View.GONE
                         // set thumbnail gone
-                        thumbnail.visibility = View.GONE
                         callback.onVideoDurationRetrieved(this@loadVideo.player!!.duration, player)
                     }
                     if (playbackState == Player.STATE_READY && player.playWhenReady){
